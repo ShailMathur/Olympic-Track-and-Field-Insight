@@ -1,32 +1,89 @@
-h1 {
-    text-align: center;
-    font-size: 1em;
-    color: #009;
-    margin-bottom: .3em;
-    text-decoration: underline;
-  }
-  
-  table {
-    margin: .3em;
-    width: 290px;
-  }
-  
-  th {
-    padding: .2em;
-  }
-  
-  td {
-    padding-left: .5em;
-    padding-right: .5em;
-    border: 1px solid #900;
-    background-color: #ffc;
-  }
-  
-  #trHeader {
-    text-decoration: underline;
-    color: #900;
-  }
-  
-  .centerCell {
-    text-align: center;
-  }
+/* Body */
+body{
+  background-color: #EDEDED;
+}
+/* Navbar */
+.navbar{
+  max-height: 57px;
+  background-color: white;
+  font-size: 15px;
+}
+.navigation .navbar-hub{
+  color: white;
+  margin-left: 30px;
+  padding: inherit;
+  font-weight: bold;
+  background-color: rgb(11, 46, 173);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+  color: #6D8092;
+  font-size: 15px;
+}
+.nav-link:hover{
+  background-color:#E7E7E7 !important;
+}
+
+.navbar-brand:hover{
+  color: rgb(175, 175, 175) !important;
+}
+/* Images */
+img{
+  width:100% !important;
+  height:100% !important;
+}
+.active, .panel:hover{
+  border-color:#0BADA6;
+  border-style: solid;
+
+}
+.vizualization{
+  width:50% !important;
+  height:50% !important;
+}
+
+/* Title Class  */
+.title{
+  color: rgb(202, 89, 13);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  padding-top: 25px;
+}
+/* Paragraph Element */
+p{
+  color: #6D8092;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+/* Box Class */
+.box {
+  margin-top: 60px;
+  margin-bottom: 62px;
+  padding: 10px 20px 15px;
+  color:black;
+  background-color: white;
+
+}
+/* Table */
+.table{
+  font-size: 15px;
+  border-top-color: white !important;
+}
+/* Footer */
+footer{
+  background-color: #585252;
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-top-color: #e44f2a;
+  color: white;
+  min-height: 55px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 15px;
+}
+
