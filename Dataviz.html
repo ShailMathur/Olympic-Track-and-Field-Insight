@@ -9,7 +9,7 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Olympics Visualization Hub</a>
+  <a href="index.html" class="active">Olympics Visualization Hub</a>
   <a href="Overview.html">Overview</a>
   <a href="AboutUs.html">About Us</a>
   <a href="DataViz.html">Data</a>
@@ -28,12 +28,9 @@
 
 
 <!-- Body Section -->
-<div style="padding-left:16px">
-  <h2>Welcome to the Olympics Data Visualization Hub</h2>
-  <p>Please navigate through our menu to take a look at our Olympics Data</p>
-</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
 
-<img src="olympics_logo.png" width="480" height="270"></img>
 
 <!-- Footer Section -->
 <footer>
@@ -50,8 +47,12 @@ function myFunction() {
   }
 }
 </script>
-<script src="app.js"></script>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<div id="data"></div>
 <script src="data.js"></script>
+<script src="app.js"></script>
+
 
 </body>
 </html>
