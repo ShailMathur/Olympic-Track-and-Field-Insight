@@ -99,7 +99,13 @@ footer{
   padding-top: 15px;
 }
 
-
+/* Scrolling */
+div.ex4 {
+  background-color: rgb(255, 255, 255);
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+}
 
 /* Re-sizing */
 
