@@ -1,71 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+{% extends 'base.html' %}
 
-</head>
-<body>
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Olympics Visualization Hub</a>
-  <a href="Overview.html">Overview</a>
-  <a href="AboutUs.html">About Us</a>
-  <a href="DataViz.html">Data</a>
-  <div class="dropdown">
-    <button class="dropbtn"> Graphs
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <a href="GraphA.html">Graph A</a>
-        <a href="GraphB.html">Graph B</a>
-        <a href="GraphC.html">Graph C</a>
+{% block title %}Overview{% endblock %}
+
+{% block content %}
+    <div style="padding-left:16px">
+        <h2> Our Mission</h2>
+        <p>For our data, we selected Track and Field data from the Olympic games over the last century.
+            We planned to take our data and import it into Postgres, SqlAlchemy,
+            draw various insights from our data such as how many the number of medals each country has won,
+            a comparison of how the Gold Medal time of select events has decreased over time,
+            and Comparison of USA Gold medal count since 1896 per Olympics has increased or decreased. </p>
+
+        <p>Then we’re going to use D3 to take the data and visualize it with filters.
+            We will have both data visualizations as well as plots from the insights
+            we drew earlier and also a dropdown menu for each page to be able to navigate from the site.
+            The data we’re using is 2395 rows.</p>
+        <p><a href="https://www.kaggle.com/jayrav13/olympic-track-field-results?select=results.csv">Data Source</a></p>
+
+        <img src="{{ url_for('static', filename='images/olympics_logo.png') }}" width="480" height="270"></img>
     </div>
-  </div> 
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+{% endblock %}
 
-<!-- Body Section -->
-<div class="container">
-  <br>
-    <div class="row">
-      <!--Olympics games project Overview--->
-      <div class="col col-12 col-md-8 divbdy">
-        <br>
-        <h2 style="color: blue;"><u>Our Mission</u></h2>
-        <img src="/Users/rodneydavermann/Desktop/Project2--Olympic-Track-and-Field-Insight/images/medals.jpeg" width="480" height="270" align="right"></img>
-  <p>For our data, we selected Track and Field data from the Olympic games over the last century. 
-    We planned to take our data and import it into Postgres, SqlAlchemy, 
-    draw various insights from our data such as how many the number of medals each country has won, 
-    a comparison of how the Gold Medal time of select events has decreased over time, 
-    and Comparison of USA Gold medal count since 1896 per Olympics has increased or decreased. </p>
-
-    <p>Then we’re going to use D3 to take the data and visualize it with filters. 
-        We will have both data visualizations as well as plots from the insights 
-        we drew earlier and also a dropdown menu for each page to be able to navigate from the site.
-         The data we’re using is 2395 rows.</p> 
-    <p><a href="https://www.kaggle.com/jayrav13/olympic-track-field-results?select=results.csv">Data Source</a></p>
-
-</div>
-
-<!-- Footer Section -->
-<footer>
-  <div class="footer">Project Members: Peter Drozdzewicz, Shailja Mathur, Wei Wu, Rodney Davermann, Matt Kenney, Huss Issa, Donald Yakam, Nwagbo Chidozie, Ricardo</div>
-</footer>
-<div class="ex4"></div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-<script src="app.js"></script>
-<script src="data.js"></script>
-
-</body>
-</html>
+{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+{% endblock %}
