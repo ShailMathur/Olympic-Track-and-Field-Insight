@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Third Chart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Olympics Visualization Hub</a>
+    <a href="Overview.html">Overview</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="DataViz.html">Data</a>
+    <div class="dropdown">
+      <button class="dropbtn"> Graphs
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+          <a href="GraphA.html">Graph A</a>
+          <a href="GraphB.html">Graph B</a>
+          <a href="GraphC.html">Graph C</a>
+      </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+<!-- Footer Section -->
+<footer>
+  <div class="footer">Project Members: Peter Drozdzewicz, Shailja Mathur, Wei Wu, Rodney Davermann, Matt Kenney, Huss Issa, Donald Yakam, Nwagbo Chidozie, Ricardo</div>
+</footer> 
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="scatter-plot"></div>
+<script src="dataGraphC.js"></script>
+<script src="plotGraphC.js"></script>
+  
+  </body>
+  </html>
