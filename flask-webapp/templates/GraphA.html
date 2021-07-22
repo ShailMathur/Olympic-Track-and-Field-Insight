@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Graph A{% endblock %}
+
+{% block content %}
+    <div id="bar-plot"></div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/dataGraphA.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plotGraphA.js') }}"></script>
+{% endblock %}

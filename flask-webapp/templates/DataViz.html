@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Data{% endblock %}
+
+{% block content %}
+    <div id="data"></div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+{% endblock %}

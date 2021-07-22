@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="{{ url_for('index') }}" class="active">Olympics Visualization Hub</a>
+    <a href="{{ url_for('overview') }}">Overview</a>
+    <a href="{{ url_for('about_us') }}">About Us</a>
+    <a href="{{ url_for('data_viz') }}">Data</a>
+    <div class="dropdown">
+        <button class="dropbtn"> Graphs
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{{ url_for('graph_a') }}">Graph A</a>
+            <a href="{{ url_for('graph_b') }}">Graph B</a>
+            <a href="{{ url_for('graph_c') }}">Graph C</a>
+        </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<!-- Body Section -->
+{% block content %}{% endblock %}
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer">Project Members: Peter Drozdzewicz, Shailja Mathur, Wei Wu, Rodney Davermann, Matt Kenney,
+        etc.
+    </div>
+</footer>
+
+{% block javascript %}{% endblock %}
+</body>
+</html>

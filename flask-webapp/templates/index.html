@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div style="padding-left:16px">
+        <h2>Welcome to the Olympics Data Visualization Hub</h2>
+        <p>Please navigate through our menu to take a look at our Olympics Data</p>
+    </div>
+
+    <img src="{{ url_for('static', filename='images/olympics_logo.png') }}" width="480" height="270"></img>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+{% endblock %}

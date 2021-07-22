@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div style="padding-left:16px">
+
+        <h2> About Us</h2>
+        <p>Check out our <a href="https://github.com/ShailMathur/Project2--Olympic-Track-and-Field-Insight">Github</a>
+            Page <br>
+            Source of our data located <a
+                    href="https://www.kaggle.com/jayrav13/olympic-track-field-results?select=results.csv">here</a></p>
+
+        <h2>Project Members and Roles </h2>
+        <ul>
+            <li><b>Visualization Lead: </b>Shailja Mathur</li>
+            <li><b>Html and CSS Lead: </b>Peter Drozdzewicz</li>
+            <li><b>Javascript Lead:</b> Wei Wu</li>
+            <li><b>SQL Lead:</b> Huss Issa</li>
+            <li>Donald Yakam</li>
+            <li>Rodney Davermann</li>
+            <li>Matt Kenney</li>
+            <li>Nwagbo Chidozie</li>
+            <li>Ricardo</li>
+        </ul>
+
+        <img src="{{ url_for('static', filename='images/olympics_logo.png') }}" width="480" height="270"></img>
+
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+{% endblock %}
