@@ -3,12 +3,28 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <div style="padding-left:16px">
-        <h2>Welcome to the Olympics Data Visualization Hub</h2>
-        <p>Please navigate through our menu to take a look at our Olympics Data</p>
-    </div>
-
-    <img src="{{ url_for('static', filename='images/olympics_logo.png') }}" width="480" height="270"></img>
+<div class="container">
+    <br>
+      <div class="row">
+        <!--Olympics games historicity-->
+        <div class="col col-12 col-md-8 divbdy">
+          <br>
+          <h1 style="color: blue;"><u>Welcome to the Olympics Data Visualization Hub</u></h1>
+          <p style="color: darkred;">Please navigate through our menu to take a look at our Olympics Data</p>
+          <hr>
+          <img src="{{ url_for('static', filename='images/olympics_logo.png') }}" width="480" height="270" align="right"></img>
+    <h2><i>From Ancient to Modern Olympics Games</i></h2>
+    <ul>
+      <li>Although the ancient Games were staged in Olympia, Greece, from 776 BC through 393 AD, it took 1503 years for the Olympics to return.</li>
+      <li>The first modern Olympics were held in Athens, Greece, in 1896.</li>
+      <li>The man responsible for its rebirth was a Frenchman named Baron Pierre de Coubertin, who presented the idea in 1894.</li>
+      <li>His original thought was to unveil the modern Games in 1900 in his native Paris, but delegates from 34 countries were so enthralled with the concept that they convinced him to move the Games up to 1896 and have Athens serve as the first host.</li>
+    </ul><br>
+    <a href="https://www.penn.museum/sites/olympics/" target="_blank">Source</a> 
+        </div>
+  
+     </div>
+   </div>    
 {% endblock %}
 
 {% block javascript %}
